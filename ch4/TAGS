@@ -1,0 +1,31 @@
+
+./examples.hs,45
+module Examples Examples0,1
+test test3,4
+
+./exercises.hs,538
+module Exercises Exercises2,3
+halve halve4,5
+halve halve5,6
+thirdA thirdA8,9
+thirdA thirdA9,10
+thirdB thirdB11,12
+thirdB thirdB12,13
+thirdC thirdC14,15
+thirdC thirdC15,16
+safetailA safetailA17,18
+safetailA safetailA18,19
+safetailB safetailB20,21
+safetailB safetailB21,22
+safetailC safetailC24,25
+safetailC safetailC25,26
+(||)||28,29
+True True29,30
+False False31,32
+(&(43,44
+mult mult53,54
+mult mult54,55
+luhnDouble luhnDouble56,57
+luhnDouble luhnDouble57,58
+luhn luhn60,61
+luhn luhn61,62

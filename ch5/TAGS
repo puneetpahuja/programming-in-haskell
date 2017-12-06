@@ -1,0 +1,37 @@
+
+./examples.hs,149
+module Examples Examples2,3
+a a4,5
+b b6,7
+c c8,9
+firsts firsts10,11
+firsts firsts11,12
+myConcat myConcat13,14
+myConcat myConcat14,15
+
+./exercises.hs,652
+module Exercises Exercises2,3
+sumOfSquares sumOfSquares4,5
+sumOfSquares sumOfSquares5,6
+sumOf100Squares sumOf100Squares7,8
+sumOf100Squares sumOf100Squares8,9
+grid grid10,11
+grid grid11,12
+grid1_2 grid1_213,14
+grid1_2 grid1_214,15
+square square16,17
+square square17,18
+square2 square219,20
+square2 square220,21
+myReplicate myReplicate22,23
+myReplicate myReplicate23,24
+replicate3True replicate3True25,26
+replicate3True replicate3True26,27
+pyths pyths28,29
+pyths pyths29,30
+factors factors32,33
+factors factors33,34
+perfect perfect35,36
+perfect perfect36,37
+perfects perfects38,39
+perfects perfects39,40

@@ -1,0 +1,16 @@
+
+./examples.hs,133
+module Examples Examples2,3
+mySum mySum4,5
+mySum mySum5,6
+qsort qsort8,9
+qsort qsort9,10
+seqn seqn15,16
+seqn seqn16,17
+
+./exercises.hs,145
+module Exercises Exercises2,3
+myProduct myProduct4,5
+myProduct myProduct5,6
+reverseQsort reverseQsort8,9
+reverseQsort reverseQsort9,10
