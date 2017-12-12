@@ -38,3 +38,15 @@ perfect n = sum (init (factors n)) == n
 
 perfects :: Int -> [Int]
 perfects n = [x | x <- [1..n], perfect x]
+
+
+ps = [(x, y) | x <- [1, 2], y <- [3, 4]]
+
+find :: Eq a => a-> [(a, b)] -> [b]
+find k t = [v | (k', v) <- t, k == k']
+
+positions :: Eq a => a -> [a] -> [Int]
+positions x xs = find x (zip xs [0..])
+
+scalarproduct :: [Int] -> [Int] -> Int
+scalarproduct xs ys = sum [x*y | (x, y) <- zip xs ys]

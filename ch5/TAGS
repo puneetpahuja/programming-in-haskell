@@ -1,4 +1,36 @@
 
+./cipher.hs,646
+positive positive7,8
+positive positive8,9
+negative negative10,11
+negative negative11,12
+let2int let2int13,14
+let2int let2int14,15
+int2let int2let18,19
+int2let int2let19,20
+shift shift23,24
+shift shift24,25
+encode encode27,28
+encode encode28,29
+table table32,33
+table table33,34
+lowers lowers37,38
+lowers lowers38,39
+count count40,41
+count count41,42
+percent percent43,44
+percent percent44,45
+freqs freqs46,47
+freqs freqs47,48
+chisqr chisqr50,51
+chisqr chisqr51,52
+rotate rotate53,54
+rotate rotate54,55
+positions positions56,57
+positions positions57,58
+crack crack60,61
+crack crack61,62
+
 ./examples.hs,149
 module Examples Examples2,3
 a a4,5
@@ -9,7 +41,7 @@ firsts firsts11,12
 myConcat myConcat13,14
 myConcat myConcat14,15
 
-./exercises.hs,652
+./exercises.hs,823
 module Exercises Exercises2,3
 sumOfSquares sumOfSquares4,5
 sumOfSquares sumOfSquares5,6
@@ -35,3 +67,10 @@ perfect perfect35,36
 perfect perfect36,37
 perfects perfects38,39
 perfects perfects39,40
+ps ps42,43
+find find44,45
+find find45,46
+positions positions47,48
+positions positions48,49
+scalarproduct scalarproduct50,51
+scalarproduct scalarproduct51,52
