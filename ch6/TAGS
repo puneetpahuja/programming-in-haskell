@@ -16,7 +16,7 @@ isort isort26,27
 zip' zip'30,31
 zip' zip'31,32
 
-./exercises.hs,306
+./exercises.hs,595
 module Exercises Exercises2,3
 fac fac4,5
 fac fac5,6
@@ -32,3 +32,19 @@ concat' concat'29,30
 concat' concat'30,31
 replicate' replicate'34,35
 replicate' replicate'35,36
+(!!:)!!:38,39
+(x(39,40
+elem' elem'42,43
+elem' elem'43,44
+merge merge47,48
+merge merge48,49
+halve halve53,54
+halve halve54,55
+msort msort60,61
+msort msort61,62
+sum' sum'69,70
+sum' sum'70,71
+take' take'73,74
+take' take'74,75
+last' last'78,79
+last' last'79,80
