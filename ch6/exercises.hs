@@ -78,4 +78,4 @@ take' n (x:xs) = x : take' (n-1) xs
 
 last' :: [a] -> a
 last' [x]    = x
-last' (x:xs) = last' xs
+last' (_:xs) = last' xs
