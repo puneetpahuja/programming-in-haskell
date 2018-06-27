@@ -2,7 +2,7 @@
 ./examples.hs,30
 module Examples Examples2,3
 
-./exercises.hs,291
+./exercises.hs,454
 module Exercises Exercises2,3
 all' all'6,7
 all' all'7,8
@@ -16,3 +16,10 @@ map' map'22,23
 map' map'23,24
 filter' filter'25,26
 filter' filter'26,27
+dec2int' dec2int'31,32
+dec2int' dec2int'32,33
+curry' curry'34,35
+curry' curry'35,36
+decurry' decurry'37,38
+decurry' decurry'38,39
+unfold unfold40,41

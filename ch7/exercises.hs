@@ -5,20 +5,20 @@ module Exercises where
 -- map f (filter p xs)
 
 all' :: (a -> Bool) -> [a] -> Bool
-all' p xs = and (map p xs)
+all' p = and . map p
 
 any' :: (a -> Bool) -> [a] -> Bool
-any' p xs = or (map p xs)
+any' p = or . map p
 
 takeWhile' :: (a -> Bool) -> [a] -> [a]
-takeWhile' _ [] = []
-takeWhile' p (x:xs) | p x = x : takeWhile' p xs
+takeWhile' _ []                 = []
+takeWhile' p (x:xs) | p x       = x : takeWhile' p xs
                     | otherwise = []
 
 dropWhile' :: (a -> Bool) -> [a] -> [a]
-dropWhile' _ [] = []
-dropWhile' p (x:xs) | p x = dropWhile' p xs
-                    | otherwise = (x:xs)
+dropWhile' _ []                 = []
+dropWhile' p (x:xs) | p x       = dropWhile' p xs
+                    | otherwise = x:xs
 
 map' :: (a -> b) -> [a] -> [b]
 map' f = foldr (\x ys -> f x : ys) []
@@ -28,3 +28,15 @@ filter' p = foldr select []
             where
               select x ys | p x = x : ys
                           | otherwise = ys
+
+dec2int' :: [Int] -> Int
+dec2int' = foldl (\n x -> n*10 + x)  0
+
+curry' :: ((a, b) -> c) -> a -> b -> c
+curry' f x y = f (x, y)
+
+decurry' :: (a -> b -> c) -> (a, b) -> c
+decurry' f (x, y) = f x y
+
+unfold p h t x | p x       = []
+               | otherwise = h x : unfold p h t (t x)

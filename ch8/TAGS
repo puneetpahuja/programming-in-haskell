@@ -1,0 +1,13 @@
+
+./examples.hs,222
+type String' String'2,3
+type Pos Pos4,5
+type Trans Trans5,6
+type Pair Pair9,10
+type Pair a a9,10
+newtype Nat Nat11,12
+newtype Nat a = Nat Nat11,12
+data A A13,14
+data A = IntInt13,14
+b b15,16
+b b16,17
