@@ -1,6 +1,6 @@
 double x = x + x
 
-quadruple x = double (double x)
+quadruple x = double . double
 
 factorial n = product [1..n]
 

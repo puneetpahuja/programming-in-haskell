@@ -7,7 +7,7 @@ halve xs = (take halfLen xs, drop halfLen xs)
            where halfLen = length xs `div` 2
 
 thirdA :: [a] -> a
-thirdA xs = head (tail (tail xs))
+thirdA xs = head.tail.tail $ xs
 
 thirdB :: [a] -> a
 thirdB xs = xs !! 2
@@ -19,12 +19,12 @@ safetailA :: [a] -> [a]
 safetailA xs = if null xs then xs else tail xs
 
 safetailB :: [a] -> [a]
-safetailB xs | null xs = xs
+safetailB xs | null xs   = xs
              | otherwise = tail xs
 
 safetailC :: [a] -> [a]
 safetailC [] = []
-safetailC (_: xs) = xs
+safetailC (_:xs) = xs
 
 (||) :: Bool -> Bool -> Bool
 True || True = True
@@ -59,4 +59,4 @@ luhnDouble x | 2 * x > 9 = 2 * x - 9
              | otherwise = 2 * x
 
 luhn :: Int -> Int -> Int -> Int -> Bool
-luhn first second third fourth = mod (fourth + luhnDouble third + second + luhnDouble first) 10 == 0
+luhn first second third fourth = (fourth + luhnDouble third + second + luhnDouble first) `mod` 10 == 0

@@ -32,11 +32,20 @@ filter' p = foldr select []
 dec2int' :: [Int] -> Int
 dec2int' = foldl (\n x -> n*10 + x)  0
 
-curry' :: ((a, b) -> c) -> a -> b -> c
+curry' :: ((a, b) -> c) -> (a -> b -> c)
 curry' f x y = f (x, y)
 
-decurry' :: (a -> b -> c) -> (a, b) -> c
+decurry' :: (a -> b -> c) -> ((a, b) -> c)
 decurry' f (x, y) = f x y
 
 unfold p h t x | p x       = []
                | otherwise = h x : unfold p h t (t x)
+
+chop8 :: [a] -> [[a]]
+chop8 = unfold null (take 8) (drop 8)
+
+map'' :: (a -> b) -> [a] -> [b]
+map'' f = unfold null (f.head) tail 
+
+iterate' :: (a -> a) -> a -> [a]
+iterate' f = unfold (const False) id f 
