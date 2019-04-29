@@ -40,7 +40,7 @@ perfects :: Int -> [Int]
 perfects n = [x | x <- [1..n], perfect x]
 
 ps  = [(x,y) | x <- [1, 2], y <- [3, 4]]
-ps' = [[(x,y) | y <- [4,5,6]] | x <- [1,2,3]]
+ps' = concat [[(x,y) | y <- [4,5,6]] | x <- [1,2,3]]
 
 find :: Eq a => a-> [(a, b)] -> [b]
 find k t = [v | (k', v) <- t, k == k']

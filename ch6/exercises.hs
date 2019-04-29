@@ -29,8 +29,8 @@ and' (x:xs) = x && (and' xs)
 
 concat' :: [[a]] -> [a]
 concat' []     = []
-concat' ([] : ys) = concat' ys
-concat' ((x:xs) : ys) = x : concat' (xs : ys)
+concat' ([] : xss) = concat' xss
+concat' ((x:xs) : xss) = x : concat' (xs : xss)
 
 replicate' :: Int -> a -> [a]
 replicate' 0 _ = []
@@ -64,8 +64,8 @@ msort [x] = [x]
 msort xs  = merge (msort firstHalf) (msort secondHalf)
             where
               halves     = halve xs
-              firstHalf  = (fst halves)
-              secondHalf = (snd halves)
+              firstHalf  = fst halves
+              secondHalf = snd halves
 
 sum' :: Num a => [a] -> a
 sum' []     = 0

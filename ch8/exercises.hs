@@ -22,12 +22,12 @@ mult (Succ m) n = add n (mult m n)
 data Tree a = Leaf a | Node (Tree a) a (Tree a)
 occurs :: Ord a => a -> Tree a -> Bool
 occurs x (Leaf y) = x == y
-occurs x (Node l y r) = occursHelper (compare x y) x (Node l y r)
+occurs x t@(Node l y r) = occursHelper (compare x y) x t
 
 occursHelper :: Ord a => Ordering -> a -> Tree a -> Bool
 occursHelper EQ _ _ = True
-occursHelper LT x (Node l y r) = occurs x l
-occursHelper GT x (Node l y r) = occurs x r
+occursHelper LT x (Node l _ _) = occurs x l
+occursHelper GT x (Node _ _ r) = occurs x r
 
 t :: Tree Int
 t = Node (Node (Leaf 1) 3 (Leaf 4)) 5 (Node (Leaf 6) 7 (Leaf 9))
@@ -108,6 +108,6 @@ eval' s (Not p)   = not (eval' s p)
 eval' s (And p q) = eval' s p && eval' s q
 eval' s (Or p q)  = eval' s p || eval' s q
 eval' s (Imply p q) = eval' s p <= eval' s q
-eval' s (Equi p q) = eval' s p <= eval' s q && eval' s q <= eval' s p
+eval' s (Equi p q) = eval' s p == eval' s q
 
 -- todo ex8 in exercise8AbstractMachine.hs

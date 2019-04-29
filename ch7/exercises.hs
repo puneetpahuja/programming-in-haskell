@@ -32,10 +32,10 @@ filter' p = foldr select []
 dec2int' :: [Int] -> Int
 dec2int' = foldl (\n x -> n*10 + x)  0
 
-curry' :: ((a, b) -> c) -> (a -> b -> c)
+curry' :: ((a, b) -> c) -> a -> b -> c
 curry' f x y = f (x, y)
 
-decurry' :: (a -> b -> c) -> ((a, b) -> c)
+decurry' :: (a -> b -> c) -> (a, b) -> c
 decurry' f (x, y) = f x y
 
 unfold p h t x | p x       = []
@@ -49,3 +49,14 @@ map'' f = unfold null (f.head) tail
 
 iterate' :: (a -> a) -> a -> [a]
 iterate' f = unfold (const False) id f 
+
+altMap :: (a -> b) -> (a -> b) -> [a] -> [b]
+altMap _ _ [] = []
+altMap f g (x:xs) = f x : altMap g f xs
+
+luhnDouble :: Int -> Int
+luhnDouble x | 2 * x > 9 = 2 * x - 9
+             | otherwise = 2 * x
+
+luhn :: [Int] -> Bool
+luhn = (== 0) . (`mod` 10) . sum . altMap id luhnDouble . reverse

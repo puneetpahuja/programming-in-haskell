@@ -7,7 +7,7 @@ halve xs = (take halfLen xs, drop halfLen xs)
            where halfLen = length xs `div` 2
 
 thirdA :: [a] -> a
-thirdA xs = head.tail.tail $ xs
+thirdA = head.tail.tail
 
 thirdB :: [a] -> a
 thirdB xs = xs !! 2

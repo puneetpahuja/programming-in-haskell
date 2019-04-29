@@ -7,6 +7,11 @@ type Trans = Pos -> Pos
 
 -- type Tree = (Int, [Tree])    -- wrong, cant have recursive types
 
+type Nat' = Int
+
+idNat' :: Nat' -> Nat'
+idNat' x = x + 1      -- not type safe. i can use integer context in Nat' context
+
 type Pair a = (a, a)
 
 newtype Nat a = Nat a
